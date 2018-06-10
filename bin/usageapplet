@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+
+import sys
+from os.path import abspath, dirname, join
+
+try:
+    import usageapplet
+except ImportError:
+    sys.path.append(abspath(join(dirname(__file__), '..')))
+
+from usageapplet import indicator
+
+indicator.main()
